@@ -57,8 +57,8 @@ getVehicleData();
 
 ## Methods
 
-- **connect()**          - Connects to your Tesla. Not required.
-- **get()**         - Executes a GET request.
-- **post()**      - Executes a POST request.
-- **request()**      - Executes a request.
+- **connect()** - Connects to your Tesla. Not required.
+- **get(path)** - Executes a GET request.
+- **post(path)** - Executes a POST request.
+- **request(method, path)** - Executes a request.
 
