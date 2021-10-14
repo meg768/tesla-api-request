@@ -1,6 +1,6 @@
 {
   "name": "tesla-api-request",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "tesla-api-request",
   "main": "tesla-api-request.js",
   "scripts": {
@@ -12,6 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/meg768/tesla-api-request.git"
   },
+  "keywords": [
+    "tesla",
+    "request",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
