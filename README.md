@@ -10,7 +10,7 @@ module lets you send GET and POST request to access your vehicle.
 ## Installation
 
 ````bash
-npm install simple-tesla-api --save
+npm install tesla-api-request --save
 ````
 
 
@@ -22,7 +22,7 @@ npm install simple-tesla-api --save
 async function doorLock() {	
 	require('dotenv').config();
 
-	var TeslaAPI = require('../tesla-api-request.js');
+	var TeslaAPI = require('tesla-api-request');
 
 	var options = {
 		token: process.env.TESLA_API_REFRESH_TOKEN,
@@ -41,7 +41,7 @@ doorLock();
 async function getVehicleData() {	
 	require('dotenv').config();
 
-	var TeslaAPI = require('../tesla-api.js');
+	var TeslaAPI = require('tesla-api-request');
 
 	var options = {
 		token: process.env.TESLA_API_REFRESH_TOKEN,
@@ -62,3 +62,4 @@ getVehicleData();
 - **post(path)** - Executes a POST request.
 - **request(method, path)** - Executes a request.
 
+https://www.teslaapi.io
