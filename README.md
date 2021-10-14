@@ -29,7 +29,7 @@ npm install tesla-api-request --save
 async function doorLock() {	
 	require('dotenv').config();
 
-	var TeslaAPI = require('../tesla-api-request.js');
+	var TeslaAPI = require('tesla-api-request');
 
 	var options = {
 		token: process.env.TESLA_API_REFRESH_TOKEN,
@@ -49,7 +49,7 @@ doorLock();
 async function getVehicleData() {	
 	require('dotenv').config();
 
-	var TeslaAPI = require('../tesla-api-request.js');
+	var TeslaAPI = require('tesla-api-request');
 
 	var options = {
 		token: process.env.TESLA_API_REFRESH_TOKEN,
