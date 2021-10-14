@@ -4,7 +4,7 @@
   "description": "tesla-api-request",
   "main": "tesla-api-request.js",
   "scripts": {
-	"goto-npm": "open https://www.npmjs.com/package/tesla-api-request",
+    "goto-npm": "open https://www.npmjs.com/package/tesla-api-request",
     "git-commit": "git add -A && git commit -m '-' && git push",
     "npm-publish": "npm publish"
   },
@@ -18,7 +18,7 @@
     "url": "https://github.com/meg768/tesla-api-request/issues"
   },
   "homepage": "https://github.com/meg768/tesla-api-request#readme",
-  "dependencies": {
+  "devDependencies": {
     "dotenv": "^10.0.0"
   }
 }
