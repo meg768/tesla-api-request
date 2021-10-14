@@ -7,6 +7,8 @@ worry about it. It also handles the renewal of access tokens.
 Simply provide a Tesla "refresh token" and this
 module lets you send GET and POST request to access your vehicle.
 
+It is light weight and no dependencies.
+
 ## Installation
 
 ````bash
@@ -61,6 +63,7 @@ getVehicleData();
 - **get(path)** - Executes a GET request.
 - **post(path)** - Executes a POST request.
 - **request(method, path)** - Executes a request.
+
 
 # Links
 - https://www.teslaapi.io
