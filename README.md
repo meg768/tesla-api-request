@@ -12,7 +12,7 @@ Simply provide a Tesla "refresh token" and
 a vehicle identification number (VIN) and this
 module lets you send GET and POST request to access your vehicle.
 
-It is light weight and no dependencies.
+It is light weight and has no dependencies.
 
 ## Installation
 
