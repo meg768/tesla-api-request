@@ -26,7 +26,7 @@ npm install tesla-api-request --save
 ### Lock door
 
 ````javascript
-var TeslaAPI = require('../tesla-api-request.js');
+var TeslaAPI = require('tesla-api-request');
 
 async function doorLock() {	
 
