@@ -2,7 +2,7 @@
 
 This is a minimal request API for Tesla vehicles. The actual API is not included here. 
 Instead, this module supports authentication so you don´t have to
-worry about it. It also handles the renewal of access access tokens given a refresh token and keeping you vehicle awake.
+worry about it. It also handles the renewal of access access tokens given a refresh token and keeping your vehicle awake.
 
 If you don´t have a "refresh token" you may get it here.
 
@@ -70,7 +70,7 @@ async function getVehicleData() {
 getVehicleData();
 ````
 
-### Get Tesla Model
+### Get your Tesla model
 
 ````javascript
 var TeslaAPI = require('tesla-api-request');
