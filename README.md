@@ -66,12 +66,11 @@ getVehicleData();
 
 ## Methods
 
-- **connect()** - Connects to your Tesla. Not required.
-- **get(path)** - Executes a GET request.
-- **post(path)** - Executes a POST request.
-- **request(method, path)** - Executes a request.
+- **async get(path)** - Executes a GET request.
+- **async post(path, body)** - Executes a POST request.
+- **async request(method, path, options)** - Executes a request with additional options.
 
+Please refer to the source code for more documentation.
 
-# Links
-- https://www.teslaapi.io
+# Tesla API Documentation
 - https://tesla-api.timdorr.com

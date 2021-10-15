@@ -203,7 +203,7 @@ module.exports = class TeslaAPI {
 		this.apiInvalidAfter = undefined;
 		this.vin = options.vin;
 		this.vehicle = undefined;
-        this.wakeupTimeout = 30000;
+        this.wakeupTimeout = 60000;
 		this.debug = () => {};
 
 		if (!isString(this.vin))
@@ -288,7 +288,7 @@ module.exports = class TeslaAPI {
 	}
 
 
-	async request(method, path) {
+	async request(method, path, options) {
 
 		// Connect if not already done
 		if (this.vehicle == undefined) {
@@ -326,15 +326,23 @@ module.exports = class TeslaAPI {
 
 
 		var path = `vehicles/${this.vehicle.id}/${path}`;
-		var response = await api.request(method, path);
+		var response = await api.request(method, path, options);
 	
-		if (response.statusCode == 408) {
-			await wakeUp();
-			response = await api.request(method, path);
-		}
+		switch(response.statusCode) {
+			case 200: {
+				break;
+			}
 
-		if (response.statusCode != 200) {
-			throw new Error(response.statusMessage);
+			case 408:
+			case 504: {
+				await wakeUp();
+				response = await api.request(method, path);
+				break;
+			}
+
+			default: {
+				throw new Error(`${response.statusMessage}. Status code ${response.statusCode}`);
+			}
 		}
 
 		return response.body.response;
@@ -344,8 +352,8 @@ module.exports = class TeslaAPI {
 		return await this.request('GET', path);
 	}
 
-	async post(path) {
-		return await this.request('POST', path);
+	async post(path, body) {
+		return await this.request('POST', path, {body:body});
 	}
 
 }
