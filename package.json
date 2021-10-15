@@ -1,6 +1,6 @@
 {
   "name": "tesla-api-request",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "tesla-api-request",
   "main": "tesla-api-request.js",
   "scripts": {
