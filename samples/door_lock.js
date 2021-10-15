@@ -1,7 +1,8 @@
-async function doorLock() {	
-	require('dotenv').config();
+var TeslaAPI = require('../tesla-api-request.js');
 
-	var TeslaAPI = require('../tesla-api-request.js');
+async function doorLock() {	
+
+	require('dotenv').config();
 
 	var options = {
 		token: process.env.TESLA_API_REFRESH_TOKEN,

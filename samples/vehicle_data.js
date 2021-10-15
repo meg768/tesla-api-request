@@ -1,7 +1,8 @@
-async function getVehicleData() {	
-	require('dotenv').config();
+var TeslaAPI = require('../tesla-api-request.js');
 
-	var TeslaAPI = require('../tesla-api-request.js');
+async function getVehicleData() {	
+
+	require('dotenv').config();
 
 	var options = {
 		token: process.env.TESLA_API_REFRESH_TOKEN,
@@ -10,7 +11,9 @@ async function getVehicleData() {
 	};
 
 	var tapi = new TeslaAPI(options);
-	console.log(await tapi.get('vehicle_data'));
+	var vehicleData = await tapi.get('vehicle_data');
+
+	console.log(JSON.stringify(vehicleData, null, 4));
 }
 
 getVehicleData();
