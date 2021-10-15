@@ -2,15 +2,16 @@
 
 This is a minimal request API for Tesla vehicles. The actual API is not included here. 
 Instead, this module supports authentication so you don´t have to
-worry about it. It also handles the renewal of access access tokens given a refresh token.
+worry about it. It also handles the renewal of access access tokens given a refresh token and keeping you vehicle awake.
 
 If you don´t have a "refresh token" you may get it here.
 
-- Apple App Store https://apps.apple.com/us/app/auth-app-for-tesla/id1552058613
+- https://apps.apple.com/us/app/auth-app-for-tesla/id1552058613
+- https://play.google.com/store/apps/details?id=net.leveugle.teslatokens&hl=en_US&gl=US
 
 Simply provide a Tesla "refresh token" and 
 a vehicle identification number (VIN) and this
-module lets you send GET and POST request to access your vehicle.
+module lets you send GET and POST requests to access your vehicle.
 
 It is light weight and has no dependencies.
 
